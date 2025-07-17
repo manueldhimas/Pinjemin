@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pinjemin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <div id="navbar"></div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mt-8 mb-16">
+        <h2 class="text-2xl font-extrabold text-[#1E293B] mb-4 select-none">
+            Browse Items
+        </h2>
+        <!-- Search and filters container -->
+        <section aria-label="Search and filter items" class="bg-white rounded-lg shadow-lg p-4 sm:p-6 mb-10 space-y-4">
+            <form class="space-y-3">
+                <input aria-label="Search items"
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                    placeholder="What do you need? (tools, camera, camping gear...)" type="search" />
+                <div class="flex flex-wrap gap-2">
+                    <button
+                        class="flex items-center space-x-1 border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600 hover:bg-gray-100"
+                        type="button">
+                        <i class="fas fa-map-marker-alt text-xs">
+                        </i>
+                        <span>
+                            Near me
+                        </span>
+                    </button>
+                    <button
+                        class="flex items-center space-x-1 border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600 hover:bg-gray-100"
+                        type="button">
+                        <i class="far fa-calendar-alt text-xs">
+                        </i>
+                        <span>
+                            Any dates
+                        </span>
+                    </button>
+                    <button
+                        class="flex items-center space-x-1 border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600 hover:bg-gray-100"
+                        type="button">
+                        <i class="fas fa-tag text-xs">
+                        </i>
+                        <span>
+                            All categories
+                        </span>
+                    </button>
+                    <button
+                        class="flex items-center space-x-1 border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600 hover:bg-gray-100"
+                        type="button">
+                        <i class="fas fa-tag text-xs">
+                        </i>
+                        <span>
+                            All categories
+                        </span>
+                    </button>
+                </div>
+                <div class="flex justify-end">
+                    <button
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs font-semibold rounded px-4 py-2 transition-colors"
+                        type="submit">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </section>
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Filters sidebar -->
+            <aside aria-label="Filters" class="bg-white rounded-lg p-6 w-full max-w-xs flex-shrink-0 shadow-sm">
+                <h3 class="font-semibold text-sm mb-4 select-none">
+                    Filters
+                </h3>
+                <div class="mb-6">
+                    <label class="block text-sm mb-2" for="categories">
+                        Categories
+                    </label>
+                    <select
+                        class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                        id="categories">
+                        <option>
+                            Select Categories
+                        </option>
+                    </select>
+                    <hr class="border-t border-gray-200 mt-6" />
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm mb-2">
+                        Price Range
+                    </label>
+                    <input aria-label="Price range slider" class="w-full accent-yellow-500" max="100" min="0"
+                        type="range" value="100" />
+                    <div class="flex justify-between text-xs text-gray-600 mt-1 select-none">
+                        <span>
+                            Rp 0/day
+                        </span>
+                        <span>
+                            Rp 300,000/day
+                        </span>
+                    </div>
+                    <button
+                        class="mt-3 w-full border border-gray-300 rounded-md text-xs py-1.5 hover:bg-gray-100 transition-colors"
+                        type="button">
+                        Apply Price
+                    </button>
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">
+                        Availability
+                    </label>
+                    <div class="flex items-center space-x-2">
+                        <input checked="" class="accent-yellow-500" id="available-only" type="checkbox" />
+                        <label class="text-xs select-none" for="available-only">
+                            Available items only
+                        </label>
+                    </div>
+                    <button
+                        class="mt-4 w-full border border-gray-300 rounded-md text-xs py-1.5 hover:bg-gray-100 transition-colors"
+                        type="button">
+                        Reset All Filters
+                    </button>
+                </div>
+            </aside>
+            <!-- Items grid -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 flex-grow">
+                <!-- Item 1 -->
+                <article aria-label="Blender item card"
+                    class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+                    <img alt="A black blender on a wooden table with a blurred green background"
+                        class="w-full h-48 object-cover rounded-t-lg" height="240"
+                        src="https://storage.googleapis.com/a1aa/image/43a5f4ee-ae29-4755-e837-acd0cd8ff20f.jpg"
+                        width="400" />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-semibold text-sm text-[#1E293B]">
+                               <a href="item_detail.html">Blender</a>
+                            </h4>
+                            <span class="text-xs font-bold text-[#1E293B]">
+                                Rp 20,000/day
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2 leading-tight">
+                            Blender buat bikin jus bukan buat bikin aset 3D
+                        </p>
+                        <div class="flex justify-between items-center text-xs text-gray-500 mb-3">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-xs">
+                                </i>
+                                <span>
+                                    Gamping
+                                </span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="far fa-star text-xs">
+                                </i>
+                                <span>
+                                    0.0 (0)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-xs text-gray-700 mt-auto">
+                            <span>
+                                AD
+                            </span>
+                            <span>
+                                admin
+                            </span>
+                            <a class="text-xs text-gray-400 hover:text-yellow-500" href="item_detail.html">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 2 -->
+                <article aria-label="PS 5 item card"
+                    class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+                    <img alt="Two PlayStation 5 consoles with two controllers on a gray background"
+                        class="w-full h-48 object-cover rounded-t-lg" height="240"
+                        src="https://storage.googleapis.com/a1aa/image/cfadf794-3771-4dce-ae81-6e4f7731c6c9.jpg"
+                        width="400" />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-semibold text-sm text-[#1E293B]">
+                                PS 5
+                            </h4>
+                            <span class="text-xs font-bold text-[#1E293B]">
+                                Rp 100,000/day
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2 leading-tight">
+                            Daripada beli dimarahin istri, mending sewa aja di sini men
+                        </p>
+                        <div class="flex justify-between items-center text-xs text-gray-500 mb-3">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-xs">
+                                </i>
+                                <span>
+                                    Gamping
+                                </span>
+                            </div>
+                            <div class="flex items-center space-x-1 text-yellow-500 font-semibold">
+                                <i class="fas fa-star text-xs">
+                                </i>
+                                <span>
+                                    5.0 (99+)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-xs text-gray-700 mt-auto">
+                            <span>
+                                AD
+                            </span>
+                            <span>
+                                admin
+                            </span>
+                            <a class="text-xs text-gray-400 hover:text-yellow-500" href="item_detail.html">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 3 -->
+                <article aria-label="Kamera Sony A7 item card"
+                    class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+                    <img alt="A Sony mirrorless camera held by a person with a blurred city street background"
+                        class="w-full h-48 object-cover rounded-t-lg" height="240"
+                        src="https://storage.googleapis.com/a1aa/image/e6cd733f-32a2-45ab-52cb-5140e82e8ec3.jpg"
+                        width="400" />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-semibold text-sm text-[#1E293B]">
+                                Kamera Sony A7
+                            </h4>
+                            <span class="text-xs font-bold text-[#1E293B]">
+                                Rp 230,000/day
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2 leading-tight">
+                            Kamera mirrorless mahal boss!! cocok buat foto waifu
+                        </p>
+                        <div class="flex justify-between items-center text-xs text-gray-500 mb-3">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-xs">
+                                </i>
+                                <span>
+                                    Gamping
+                                </span>
+                            </div>
+                            <div class="flex items-center space-x-1 text-yellow-500 font-semibold">
+                                <i class="fas fa-star text-xs">
+                                </i>
+                                <span>
+                                    4.5 (83)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-xs text-gray-700 mt-auto">
+                            <span>
+                                AD
+                            </span>
+                            <span>
+                                admin
+                            </span>
+                            <a class="text-xs text-gray-400 hover:text-yellow-500" href="item_detail.html">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Item 4 -->
+                <article aria-label="Sound Horeg item card"
+                    class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+                    <img alt="A truck loaded with many large speakers parked outdoors under a cloudy sky"
+                        class="w-full h-48 object-cover rounded-t-lg" height="240"
+                        src="https://storage.googleapis.com/a1aa/image/4a305630-3e30-4ec7-b84d-a93c9101acb4.jpg"
+                        width="400" />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-semibold text-sm text-[#1E293B]">
+                                Sound Horeg
+                            </h4>
+                            <span class="text-xs font-bold text-[#1E293B]">
+                                Rp 100,000,000/day
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2 leading-tight">
+                            Hobi mahal ini bos!! Hobi mahal ini bos!!
+                        </p>
+                        <div class="flex justify-between items-center text-xs text-gray-500 mb-3">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-map-marker-alt text-xs">
+                                </i>
+                                <span>
+                                    Gamping
+                                </span>
+                            </div>
+                            <div class="flex items-center space-x-1 text-yellow-500 font-semibold">
+                                <i class="fas fa-star text-xs">
+                                </i>
+                                <span>
+                                    3.5 (14)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-xs text-gray-700 mt-auto">
+                            <span>
+                                AD
+                            </span>
+                            <span>
+                                admin
+                            </span>
+                            <a class="text-xs text-gray-400 hover:text-yellow-500" href="item_detail.html">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+
+        // Load footer
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
+
+</html>

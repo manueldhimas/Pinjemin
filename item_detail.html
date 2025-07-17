@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pinjemin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        .flatpickr-calendar {
+            font-family: 'Inter', sans-serif;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            box-shadow: none;
+        }
+
+        .flatpickr-months .flatpickr-month {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .flatpickr-weekdays {
+            font-size: 13px;
+            font-weight: 500;
+            color: #9ca3af;
+        }
+
+        .flatpickr-day {
+            font-size: 13px;
+            border-radius: 9999px !important;
+            line-height: 28px;
+            width: 28px;
+            height: 28px;
+            margin: 2px;
+        }
+
+        .flatpickr-day.selected,
+        .flatpickr-day.today {
+            background: #facc15;
+            color: #1f2937;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <div id="navbar"></div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <a class="inline-flex items-center text-sm text-[#1f2937] mb-6 hover:underline" href="browse.html">
+            <i class="fas fa-arrow-left mr-2">
+            </i>
+            Back to Browse
+        </a>
+        <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Left content -->
+            <section class="flex-1 bg-white rounded-lg shadow-sm p-4">
+                <div class="relative">
+                    <img alt="Black kitchen blender on a table in front of a window with green garden outside"
+                        class="rounded-lg mx-auto" height="400"
+                        src="https://storage.googleapis.com/a1aa/image/44776e97-1a89-4a3b-922b-629b4ef90b6a.jpg"
+                        width="600" />
+                    <div aria-hidden="true"
+                        class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 text-2xl">
+                        <i class="fas fa-universal-access">
+                        </i>
+                    </div>
+                    <button aria-label="Previous image"
+                        class="absolute top-1/2 left-0 -translate-y-1/2 bg-white border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-chevron-left">
+                        </i>
+                    </button>
+                    <button aria-label="Next image"
+                        class="absolute top-1/2 right-0 -translate-y-1/2 bg-white border border-gray-300 rounded-full w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </button>
+                </div>
+                <article
+                    class="mt-6 bg-white rounded-lg p-6 shadow-sm border border-transparent hover:border-gray-200 transition-colors">
+                    <div class="flex justify-between items-center mb-2">
+                        <h2 class="font-extrabold text-xl text-[#1f2937]">
+                            Blender
+                        </h2>
+                        <span
+                            class="text-sm font-semibold text-[#1f2937] border border-gray-300 rounded-full px-3 py-1">
+                            Rp 20,000/day
+                        </span>
+                    </div>
+                    <div class="flex items-center space-x-2 mb-1">
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                        </div>
+                        <span class="text-sm text-gray-600 font-medium">
+                            5.0 (0 reviews)
+                        </span>
+                    </div>
+                    <div class="flex items-center text-gray-600 text-sm mb-4">
+                        <i class="fas fa-map-marker-alt mr-1">
+                        </i>
+                        <span>
+                            Gamping
+                        </span>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4">
+                        <nav aria-label="Tabs" class="inline-flex rounded-md shadow-sm mb-4">
+                            <button aria-current="page"
+                                class="bg-white border border-gray-300 rounded-l-md px-3 py-1 text-xs font-semibold text-[#1f2937]">
+                                Description
+                            </button>
+                            <button
+                                class="border border-gray-300 border-l-0 rounded-r-md px-3 py-1 text-xs text-gray-500">
+                                Reviews (2)
+                            </button>
+                        </nav>
+                        <p class="text-sm text-[#1f2937] mb-6">
+                            Blender buat bikin jus bukan buat bikin aset 3D
+                        </p>
+                        <div>
+                            <h3 class="text-sm font-semibold mb-2">
+                                Owner
+                            </h3>
+                            <div class="flex items-center space-x-3 bg-[#f9fafb] rounded-lg p-3">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 text-gray-600 font-semibold">
+                                    AD
+                                </div>
+                                <div class="text-xs text-gray-600">
+                                    <p class="font-semibold text-[#1f2937]">
+                                        Ini Admin
+                                    </p>
+                                    <p>
+                                        Member since 2025
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- Right content -->
+            <aside class="w-full max-w-sm flex flex-col gap-6">
+                <section
+                    class="bg-white rounded-lg p-6 shadow-sm border border-transparent hover:border-gray-200 transition-colors">
+                    <h3 class="font-extrabold text-[#1f2937] mb-2">
+                        Rent This Item
+                    </h3>
+                    <p class="text-xs text-gray-600 mb-1">
+                        Daily Rate
+                    </p>
+                    <p class="font-extrabold text-lg mb-4">
+                        Rp 20,000
+                    </p>
+                    <a
+                        class="w-full bg-[#f59e0b] hover:bg-[#d17f07] transition-colors rounded-md py-2 mb-3 flex items-center justify-center space-x-2 text-white text-sm font-semibold" href="login.html">
+                        <i class="far fa-calendar-alt">
+                        </i>
+                        <span>
+                            Rent Now
+                        </span>
+                    </a>
+                    <a
+                        class="w-full border border-gray-300 rounded-md py-2 flex items-center justify-center space-x-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors" href="login.html">
+                        <i class="far fa-comment-alt">
+                        </i>
+                        <span>
+                            Contact Owner
+                        </span>
+                    </a>
+                </section>
+                <section
+                    class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 transition-colors w-full font-[Inter,sans-serif]">
+                    <h3 class="font-extrabold text-[#1f2937] mb-1">Availability</h3>
+                    <p class="text-xs text-gray-600 mb-4">Check the availability of this item.</p>
+
+                    <div class="mb-4">
+                        <label for="start-date" class="text-xs text-gray-500 mb-1 block">Start Date</label>
+                        <div class="relative">
+                            <input id="start-date" type="text" placeholder="Select start date"
+                                class="w-full text-sm border border-gray-200 rounded-md px-3 py-2 pr-10 text-left text-gray-700 bg-white focus:outline-none"
+                                style="appearance: none; font-family: inherit;" />
+                            <i
+                                class="far fa-calendar-alt absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="end-date" class="text-xs text-gray-500 mb-1 block">End Date</label>
+                        <div class="relative">
+                            <input id="end-date" type="text" placeholder="Select end date"
+                                class="w-full text-sm border border-gray-200 rounded-md px-3 py-2 pr-10 text-left text-gray-700 bg-white focus:outline-none"
+                                style="appearance: none; font-family: inherit;" />
+                            <i
+                                class="far fa-calendar-alt absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <p id="duration-text" class="text-xs text-gray-500 mt-2 text-center hidden"></p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+
+        // Load footer
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        const startInput = document.getElementById("start-date");
+        const endInput = document.getElementById("end-date");
+        const durationText = document.getElementById("duration-text");
+
+        flatpickr(startInput, {
+            defaultDate: "2025-07-17",
+            dateFormat: "F j, Y",
+            disableMobile: true,
+            onChange: updateDuration
+        });
+
+        flatpickr(endInput, {
+            defaultDate: "2025-07-20",
+            dateFormat: "F j, Y",
+            disableMobile: true,
+            onChange: updateDuration
+        });
+
+        function updateDuration() {
+            const start = new Date(startInput.value);
+            const end = new Date(endInput.value);
+
+            if (!isNaN(start) && !isNaN(end) && end >= start) {
+                const diff = Math.ceil((end - start) / (1000 * 60 * 60 * 24)) + 1;
+                durationText.textContent = `Duration: ${diff} day${diff > 1 ? 's' : ''}`;
+                durationText.classList.remove("hidden");
+            } else {
+                durationText.classList.add("hidden");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

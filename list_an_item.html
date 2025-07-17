@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Pinjemin</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+   <style>
+      body {
+         font-family: "Inter", sans-serif;
+      }
+   </style>
+</head>
+
+<body class="bg-white text-gray-900">
+   <div id="navbar"></div>
+   <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 py-10">
+      <form aria-label="List Your Item form" class="bg-white rounded-lg p-8 mb-8" novalidate="">
+         <h2 class="font-semibold text-[#0B1E40] text-lg mb-4">
+            List Your Item
+         </h2>
+         <div class="border border-[#D1D5DB] rounded-md p-4 mb-6 text-xs text-[#6B7280] leading-tight">
+            List your unused items and earn money Provide detailed information to
+            make your listing stand out. Clear photos and descriptions attract more
+            renters.
+         </div>
+         <label class="block text-xs text-[#374151] mb-1" for="item-name">
+            Item Name
+         </label>
+         <input
+            class="w-full border border-[#D1D5DB] rounded-md px-3 py-2 text-xs text-[#6B7280] mb-1 focus:outline-none focus:ring-2 focus:ring-[#FFB800]"
+            id="item-name" name="item-name" placeholder="e.g., Power Drill, DSLR Camera, Camping Tent" type="text" />
+         <p class="text-[10px] text-[#9CA3AF] mb-4">
+            A clear, specific name helps renters find your item.
+         </p>
+         <label class="block text-xs text-[#374151] mb-1" for="category">
+            Category
+         </label>
+         <select
+            class="w-full border border-[#D1D5DB] rounded-md px-3 py-2 text-xs text-[#6B7280] mb-1 focus:outline-none focus:ring-2 focus:ring-[#FFB800]"
+            id="category" name="category">
+            <option>
+               Tools
+            </option>
+         </select>
+         <p class="text-[10px] text-[#9CA3AF] mb-4">
+            Choose the category that best fits your item.
+         </p>
+         <label class="block text-xs text-[#374151] mb-1" for="description">
+            Description
+         </label>
+         <textarea
+            class="w-full border border-[#D1D5DB] rounded-md px-3 py-2 text-xs text-[#6B7280] mb-1 resize-none focus:outline-none focus:ring-2 focus:ring-[#FFB800]"
+            id="description" name="description"
+            placeholder="Describe your item in detail, including condition, features, and any included accessories"
+            rows="4"></textarea>
+         <p class="text-[10px] text-[#9CA3AF] mb-6">
+            Be thorough and highlight the benefits of your item.
+         </p>
+         <div class="flex flex-col sm:flex-row sm:space-x-6 mb-6">
+            <div class="flex-1">
+               <label class="block text-xs text-[#374151] mb-1" for="daily-price">
+                  Daily Rental Price
+               </label>
+               <div class="flex items-center border border-[#D1D5DB] rounded-md px-3 py-2 text-xs text-[#6B7280] mb-1">
+                  <span class="select-none">
+                     Rp.
+                  </span>
+                  <input class="w-full bg-transparent text-xs text-[#6B7280] ml-1 focus:outline-none" id="daily-price"
+                     min="0" name="daily-price" type="number" value="0" />
+               </div>
+               <p class="text-[10px] text-[#9CA3AF]">
+                  Set a competitive daily rate.
+               </p>
+            </div>
+            <div class="flex-1 mt-4 sm:mt-0">
+               <label class="block text-xs text-[#374151] mb-1" for="location">
+                  Location
+               </label>
+               <input
+                  class="w-full border border-[#D1D5DB] rounded-md px-3 py-2 text-xs text-[#6B7280] mb-1 focus:outline-none focus:ring-2 focus:ring-[#FFB800]"
+                  id="location" name="location" placeholder="e.g., Bogor, Jawa Barat" type="text" />
+               <p class="text-[10px] text-[#9CA3AF]">
+                  Where renters can pick up the item.
+               </p>
+            </div>
+         </div>
+         <label class="block text-xs text-[#374151] mb-1">
+            Upload Photos
+         </label>
+         <button aria-label="Upload photos"
+            class="w-20 h-20 border border-dashed border-[#9CA3AF] rounded-md flex flex-col items-center justify-center text-[#9CA3AF] text-xs mb-2 focus:outline-none"
+            type="button">
+            <i class="fas fa-camera text-lg mb-1">
+            </i>
+         </button>
+         <p class="text-[10px] text-[#9CA3AF] mb-6">
+            Add up to 6 high-quality photos. First image will be your listing's main
+            photo.
+         </p>
+         <hr class="border-t border-[#E5E7EB] mb-6" />
+         <div class="flex justify-end space-x-4">
+            <a href="index_login.html"><button
+                  class="text-[#1B2437] bg-white border border-[#374151] rounded-md px-4 py-2 text-xs hover:bg-[#F3F4F6] transition"
+                  type="button">
+                  Cancel
+               </button></a>
+            <a href="browse_login.html"><button
+                  class="bg-[#FFB800] text-white rounded-md px-4 py-2 text-xs flex items-center space-x-1 hover:bg-[#e6a700] transition"
+                  type="submit">
+                  <i class="fas fa-check">
+                  </i>
+                  <span>
+                     List Item
+                  </span>
+               </button></a>
+         </div>
+      </form>
+      <section aria-label="Tips for a Great Listing"
+         class="bg-white rounded-md p-4 text-[10px] text-[#0B1E40] max-w-4xl">
+         <p class="font-semibold mb-1">
+            Tips for a Great Listing
+         </p>
+         <ul class="list-disc list-inside space-y-0.5">
+            <li>
+               Use clear, well-lit photos from multiple angles
+            </li>
+            <li>
+               Be honest about the item's condition
+            </li>
+            <li>
+               Specify any instructions or requirements for use
+            </li>
+            <li>
+               Respond quickly to rental requests
+            </li>
+            <li>
+               Set a competitive price by looking at similar items
+            </li>
+         </ul>
+      </section>
+   </main>
+   <div id="footer"></div>
+
+
+   <script>
+      // Load navbar
+      fetch('navbar_login.html')
+         .then(res => res.text())
+         .then(data => document.getElementById('navbar').innerHTML = data);
+
+      // Load footer
+      fetch('footer.html')
+         .then(res => res.text())
+         .then(data => document.getElementById('footer').innerHTML = data);
+   </script>
+</body>
+
+</html>

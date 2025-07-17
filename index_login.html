@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pinjemin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <div id="navbar"></div>
+
+    <section class="relative bg-gray-600">
+        <img alt="Close-up image of a blender base with a gray background" class="w-full object-cover opacity-40"
+            height="600" src="https://storage.googleapis.com/a1aa/image/c9a43821-21f9-4ddc-c3fc-4f50ce901ce9.jpg"
+            style="height: 400px" width="1200" />
+        <div class="absolute inset-0 flex flex-col justify-center items-center px-4 text-center max-w-4xl mx-auto w-full"
+            style="top: 50%; transform: translateY(-50%)">
+            <h1 class="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight">
+                Rent What You Need.
+                <br />
+                <span class="text-yellow-500">
+                    Share What You Don't Use.
+                </span>
+            </h1>
+            <p class="text-white text-sm sm:text-base mt-2 max-w-xl">
+                Turn your unused items into income and find affordable rentals in your neighborhood.
+            </p>
+            <form class="bg-white rounded-md shadow-lg mt-6 w-full max-w-3xl p-4 sm:p-6"
+                onsubmit="event.preventDefault()">
+                <input aria-label="Search what you need"
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 text-xs sm:text-sm placeholder-gray-400 focus:outline-yellow-500"
+                    placeholder="What do you need? (tools, camera, camping gear...)" type="search" />
+                <div class="flex flex-wrap gap-2 mt-3 text-xs sm:text-sm">
+                    <button
+                        class="flex items-center space-x-1 border border-gray-300 rounded-full px-3 py-1 hover:bg-gray-100"
+                        type="button">
+                        <i class="fas fa-map-marker-alt text-gray-600">
+                        </i>
+                        <span>
+                            Near me
+                        </span>
+                    </button>
+                    <button
+                        class="flex items-center space-x-1 border border-gray-300 rounded-full px-3 py-1 hover:bg-gray-100"
+                        type="button">
+                        <i class="far fa-calendar-alt text-gray-600">
+                        </i>
+                        <span>
+                            Any dates
+                        </span>
+                    </button>
+                    <button
+                        class="flex items-center space-x-1 border border-gray-300 rounded-full px-3 py-1 hover:bg-gray-100"
+                        type="button">
+                        <i class="fas fa-tags text-gray-600">
+                        </i>
+                        <span>
+                            All categories
+                        </span>
+                    </button>
+                    <a href="item_detail_login.html"><button
+                            class="ml-auto bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded px-4 py-2 transition"
+                            type="submit">
+                            Search
+                        </button></a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Browse by Category -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <h2 class="font-bold text-gray-900 mb-6 text-sm sm:text-base">
+            <a href="browse_login.html">Browse by Category</a>
+        </h2>
+        <ul class="grid grid-cols-6 sm:grid-cols-10 gap-y-6 text-center text-xs sm:text-sm text-gray-900 font-normal">
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-wrench text-base">
+                </i>
+                <span>
+                    Tools
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-camera text-base">
+                </i>
+                <span>
+                    Photography
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-tv text-base">
+                </i>
+                <span>
+                    Electronics
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-campground text-base">
+                </i>
+                <span>
+                    Outdoor
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-home text-base">
+                </i>
+                <span>
+                    Home
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-mobile-alt text-base">
+                </i>
+                <span>
+                    Gadgets
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-tshirt text-base">
+                </i>
+                <span>
+                    Fashion
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-bicycle text-base">
+                </i>
+                <span>
+                    Sports
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-music text-base">
+                </i>
+                <span>
+                    Music
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-book text-base">
+                </i>
+                <span>
+                    Books
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-clipboard-check text-base">
+                </i>
+                <span>
+                    Party
+                </span>
+            </li>
+            <li class="flex flex-col items-center space-y-1">
+                <i class="fas fa-ellipsis-h text-base">
+                </i>
+                <span>
+                    More
+                </span>
+            </li>
+        </ul>
+    </section>
+    <!-- Featured Items Near You -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="font-bold text-gray-900 text-sm sm:text-base">
+                Featured Items Near You
+            </h3>
+            <a class="text-gray-600 text-xs sm:text-sm hover:underline flex items-center space-x-1" href="#">
+                View all
+                <i class="fas fa-chevron-right text-xs">
+                </i>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Item 1 -->
+            <article class="border border-gray-200 rounded-md shadow-sm overflow-hidden bg-white flex flex-col">
+                <img alt="Blender on a wooden table with green outdoor background"
+                    class="w-full object-cover h-40 sm:h-48" height="250"
+                    src="https://storage.googleapis.com/a1aa/image/6918b65d-c00a-478c-18b1-cdc1957f86a2.jpg"
+                    width="400" />
+                <div class="p-3 flex flex-col flex-grow">
+                    <h4 class="font-semibold text-sm sm:text-base">
+                        Blender
+                    </h4>
+                    <div class="flex justify-between text-xs sm:text-sm text-gray-700 mt-1">
+                        <span>
+                            Rp 20.000/day
+                        </span>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1 leading-tight flex-grow">
+                        Blender buat bikin jus bukan buat bikin aset 3D
+                    </p>
+                    <div class="flex items-center space-x-2 text-xs text-gray-600 mt-2">
+                        <i class="fas fa-map-marker-alt">
+                        </i>
+                        <span>
+                            Gamping
+                        </span>
+                        <span class="ml-auto flex items-center space-x-1">
+                            <i class="far fa-star text-yellow-400">
+                            </i>
+                            <span>
+                                0.0 (0)
+                            </span>
+                        </span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center text-xs text-gray-500 font-semibold">
+                        <span>
+                            AD admin
+                        </span>
+                        <a class="hover:underline" href="item_detail_login.html">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Item 2 -->
+            <article class="border border-gray-200 rounded-md shadow-sm overflow-hidden bg-white flex flex-col">
+                <img alt="PlayStation 5 controllers on a black background" class="w-full object-cover h-40 sm:h-48"
+                    height="250"
+                    src="https://storage.googleapis.com/a1aa/image/36b2c042-3f53-41ef-189c-72b1544973a1.jpg"
+                    width="400" />
+                <div class="p-3 flex flex-col flex-grow">
+                    <h4 class="font-semibold text-sm sm:text-base">
+                        PS 5
+                    </h4>
+                    <div class="flex justify-between text-xs sm:text-sm text-gray-700 mt-1">
+                        <span>
+                            Rp 100.000/day
+                        </span>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1 leading-tight flex-grow">
+                        Daripada beli dimarahin istri, mending sewa aja di sini men
+                    </p>
+                    <div class="flex items-center space-x-2 text-xs text-gray-600 mt-2">
+                        <i class="fas fa-map-marker-alt">
+                        </i>
+                        <span>
+                            Gamping
+                        </span>
+                        <span class="ml-auto flex items-center space-x-1 text-yellow-400">
+                            <i class="fas fa-star">
+                            </i>
+                            <span>
+                                5.0 (99+)
+                            </span>
+                        </span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center text-xs text-gray-500 font-semibold">
+                        <span>
+                            AD admin
+                        </span>
+                        <a class="hover:underline" href="item_detail_login.html">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Item 3 -->
+            <article class="border border-gray-200 rounded-md shadow-sm overflow-hidden bg-white flex flex-col">
+                <img alt="Sony camera held by a person with blurred outdoor background"
+                    class="w-full object-cover h-40 sm:h-48" height="250"
+                    src="https://storage.googleapis.com/a1aa/image/1de7c710-b8f6-4fdc-40d4-0ca265bd9688.jpg"
+                    width="400" />
+                <div class="p-3 flex flex-col flex-grow">
+                    <h4 class="font-semibold text-sm sm:text-base">
+                        Kamera Sony A7
+                    </h4>
+                    <div class="flex justify-between text-xs sm:text-sm text-gray-700 mt-1">
+                        <span>
+                            Rp 230.000/day
+                        </span>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1 leading-tight flex-grow">
+                        Kamera mirrorless mahal boss!! cocok buat foto waifu
+                    </p>
+                    <div class="flex items-center space-x-2 text-xs text-gray-600 mt-2">
+                        <i class="fas fa-map-marker-alt">
+                        </i>
+                        <span>
+                            Gamping
+                        </span>
+                        <span class="ml-auto flex items-center space-x-1 text-yellow-400">
+                            <i class="fas fa-star">
+                            </i>
+                            <span>
+                                4.5 (83)
+                            </span>
+                        </span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center text-xs text-gray-500 font-semibold">
+                        <span>
+                            AD admin
+                        </span>
+                        <a class="hover:underline" href="item_detail_login.html">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Item 4 -->
+            <article class="border border-gray-200 rounded-md shadow-sm overflow-hidden bg-white flex flex-col">
+                <img alt="Large sound system speakers stacked outdoors on a truck"
+                    class="w-full object-cover h-40 sm:h-48" height="250"
+                    src="https://storage.googleapis.com/a1aa/image/0f11ca67-86ca-44fc-cc31-2617eef00ccc.jpg"
+                    width="400" />
+                <div class="p-3 flex flex-col flex-grow">
+                    <h4 class="font-semibold text-sm sm:text-base">
+                        Sound Horeq
+                    </h4>
+                    <div class="flex justify-between text-xs sm:text-sm text-gray-700 mt-1">
+                        <span>
+                            Rp 100.000.000/day
+                        </span>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1 leading-tight flex-grow">
+                        Hobi mahal ini bos!! Hobi mahal ini bos!!
+                    </p>
+                    <div class="flex items-center space-x-2 text-xs text-gray-600 mt-2">
+                        <i class="fas fa-map-marker-alt">
+                        </i>
+                        <span>
+                            Gamping
+                        </span>
+                        <span class="ml-auto flex items-center space-x-1 text-yellow-400">
+                            <i class="fas fa-star">
+                            </i>
+                            <span>
+                                3.5 (14)
+                            </span>
+                        </span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center text-xs text-gray-500 font-semibold">
+                        <span>
+                            AD admin
+                        </span>
+                        <a class="hover:underline" href="item_detail_login.html">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- How Pinjemin Works -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-10">
+        <h3 class="font-bold text-gray-900 text-lg sm:text-xl mb-2">
+            How Pinjemin Works
+        </h3>
+        <p class="text-gray-600 text-sm sm:text-base max-w-md mx-auto leading-relaxed">
+            Sharing economy made simple. Earn money from items you rarely use, or rent what you need at a fraction of
+            the
+            cost.
+        </p>
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-8 text-gray-700 text-xs sm:text-sm">
+            <div class="flex flex-col items-center space-y-2">
+                <i class="fas fa-camera text-xl">
+                </i>
+                <h4 class="font-semibold text-gray-900">
+                    List Your Items
+                </h4>
+                <p class="max-w-[180px]">
+                    Take photos and describe your items. Set your rental price and availability.
+                </p>
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+                <i class="fas fa-comment-alt text-xl">
+                </i>
+                <h4 class="font-semibold text-gray-900">
+                    Connect &amp; Coordinate
+                </h4>
+                <p class="max-w-[180px]">
+                    Receive rental requests, chat with renters, and arrange pickup/delivery.
+                </p>
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+                <i class="fas fa-dollar-sign text-xl">
+                </i>
+                <h4 class="font-semibold text-gray-900">
+                    Earn &amp; Save
+                </h4>
+                <p class="max-w-[180px]">
+                    Get paid securely when you lend items. Save money when you rent from others.
+                </p>
+            </div>
+        </div>
+        <a href="how_login.html"><button
+                class="mt-8 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded px-6 py-2 transition"
+                type="button">
+                Learn More
+            </button></a>
+    </section>
+    <!-- What Our Users Say -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <h3 class="font-bold text-gray-900 text-center text-sm sm:text-base mb-6">
+            What Our Users Say
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <!-- User 1 -->
+            <article class="bg-gray-50 rounded-md p-4 text-xs sm:text-sm text-gray-900 space-y-3">
+                <div class="flex items-center space-x-3">
+                    <img alt="Profile picture of Sarah J." class="rounded-full w-10 h-10 object-cover" height="40"
+                        src="https://storage.googleapis.com/a1aa/image/955f2aa4-0338-459d-86b6-4b8d715042b2.jpg"
+                        width="40" />
+                    <div>
+                        <p class="font-semibold">
+                            Sarah J.
+                        </p>
+                        <div class="flex text-yellow-400 space-x-1">
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <p class="leading-relaxed">
+                    "I made over Rp 3,000,000 last month renting out my pressure washer and leaf blower. These were just
+                    collecting dust in my garage, and now they're making me money!"
+                </p>
+            </article>
+            <!-- User 2 -->
+            <article class="bg-gray-50 rounded-md p-4 text-xs sm:text-sm text-gray-900 space-y-3">
+                <div class="flex items-center space-x-3">
+                    <img alt="Profile picture of David T." class="rounded-full w-10 h-10 object-cover" height="40"
+                        src="https://storage.googleapis.com/a1aa/image/6244fb50-001b-4ef9-3cd1-9bf7ad69d022.jpg"
+                        width="40" />
+                    <div>
+                        <p class="font-semibold">
+                            David T.
+                        </p>
+                        <div class="flex text-yellow-400 space-x-1">
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <p class="leading-relaxed">
+                    "Instead of buying expensive camping gear for our weekend trip, we rented everything we needed for a
+                    fraction
+                    of the cost. Pinjemin saved us hundreds of dollars!"
+                </p>
+            </article>
+            <!-- User 3 -->
+            <article class="bg-gray-50 rounded-md p-4 text-xs sm:text-sm text-gray-900 space-y-3">
+                <div class="flex items-center space-x-3">
+                    <img alt="Profile picture of Lisa M." class="rounded-full w-10 h-10 object-cover" height="40"
+                        src="https://storage.googleapis.com/a1aa/image/88d60fe2-847f-4eb0-d461-a6c709a31ff6.jpg"
+                        width="40" />
+                    <div>
+                        <p class="font-semibold">
+                            Lisa M.
+                        </p>
+                        <div class="flex text-yellow-400 space-x-1">
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <p class="leading-relaxed">
+                    "The platform is so easy to use! I've been both a lender and a renter. I love that I can message
+                    people
+                    directly and the calendar makes scheduling simple."
+                </p>
+            </article>
+        </div>
+    </section>
+    <!-- Trust & Safety -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <h3 class="font-bold text-gray-900 text-center text-sm sm:text-base mb-2">
+            Trust &amp; Safety
+        </h3>
+        <p class="text-gray-600 text-center text-xs sm:text-sm mb-8">
+            We've built Pinjemin with trust and safety as our top priorities.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 text-gray-700 text-xs sm:text-sm">
+            <div class="bg-gray-50 rounded-md p-4 flex flex-col space-y-2">
+                <i class="fas fa-user-check text-lg">
+                </i>
+                <h4 class="font-semibold text-gray-900">
+                    Verified Users
+                </h4>
+                <p class="leading-tight">
+                    All users go through our verification process before renting or lending.
+                </p>
+            </div>
+            <div class="bg-gray-50 rounded-md p-4 flex flex-col space-y-2">
+                <i class="fas fa-shield-alt text-lg">
+                </i>
+                <h4 class="font-semibold text-gray-900">
+                    Secure Payments
+                </h4>
+                <p class="leading-tight">
+                    All transactions are protected with secure payment processing.
+                </p>
+            </div>
+            <div class="bg-gray-50 rounded-md p-4 flex flex-col space-y-2">
+                <i class="fas fa-file-alt text-lg">
+                </i>
+                <h4 class="font-semibold text-gray-900">
+                    Rental Agreements
+                </h4>
+                <p class="leading-tight">
+                    Clear documentation for every rental with terms and conditions.
+                </p>
+            </div>
+            <div class="bg-gray-50 rounded-md p-4 flex flex-col space-y-2">
+                <i class="fas fa-headphones-alt text-lg">
+                </i>
+                <h4 class="font-semibold text-gray-900">
+                    24/7 Support
+                </h4>
+                <p class="leading-tight">
+                    Our customer support team is always available to help with any issues.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Join Community -->
+    <section
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center py-6 border-t border-gray-200">
+        <h4 class="font-bold text-yellow-500 text-lg sm:text-xl mb-4 sm:mb-0 select-none">
+            Join our community today.
+        </h4>
+        <div class="flex space-x-3">
+            <a href="list_an_item.html"><button
+                    class="bg-[#222B38] border border-gray-700 text-gray-300 text-sm font-semibold py-2 px-5 rounded hover:bg-gray-700 transition"
+                    type="button">
+                    List an Item
+                </button></a>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+
+    <script>
+        // Load navbar
+        fetch('navbar_login.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+
+        // Load footer
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
+
+</html>

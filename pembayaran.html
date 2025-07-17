@@ -1,0 +1,329 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+        Pinjemin Billing Details
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black relative">
+    <div id="navbar"></div>
+    <!-- Main Content -->
+    <main class="flex-1 w-full px-4 sm:px-6 lg:px-8 py-10 flex justify-center">
+        <div class="w-full max-w-4xl">
+            <h1 class="text-xl md:text-2xl font-mono font-semibold mb-8 tracking-wide">
+                Billing Details
+            </h1>
+            <div class="flex flex-col md:flex-row md:gap-12">
+                <!-- Left form -->
+                <form class="w-full md:w-3/5 space-y-6" id="billingForm" novalidate>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1 font-normal" for="firstName">
+                            First Name
+                            <span class="text-[#F59E0B]">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="given-name"
+                            class="w-full bg-gray-100 rounded-md border border-transparent focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B] px-3 py-2 text-sm placeholder-gray-400"
+                            id="firstName" name="firstName" placeholder="" required type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1 font-normal" for="streetAddress">
+                            Street Address
+                            <span class="text-[#F59E0B]">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="street-address"
+                            class="w-full bg-gray-100 rounded-md border border-transparent focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B] px-3 py-2 text-sm placeholder-gray-400"
+                            id="streetAddress" name="streetAddress" placeholder="" required type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1 font-normal" for="apartment">
+                            Apartment, floor, etc. (optional)
+                        </label>
+                        <input autocomplete="address-line2"
+                            class="w-full bg-gray-100 rounded-md border border-transparent focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B] px-3 py-2 text-sm placeholder-gray-400"
+                            id="apartment" name="apartment" placeholder="" type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1 font-normal" for="townCity">
+                            Town/City
+                            <span class="text-[#F59E0B]">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="address-level2"
+                            class="w-full bg-gray-100 rounded-md border border-transparent focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B] px-3 py-2 text-sm placeholder-gray-400"
+                            id="townCity" name="townCity" placeholder="" required type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1 font-normal" for="phoneNumber">
+                            Phone Number
+                            <span class="text-[#F59E0B]">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="tel"
+                            class="w-full bg-gray-100 rounded-md border border-transparent focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B] px-3 py-2 text-sm placeholder-gray-400"
+                            id="phoneNumber" name="phoneNumber" pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+1234567890"
+                            required type="tel" />
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1 font-normal" for="emailAddress">
+                            Email Address
+                            <span class="text-[#F59E0B]">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="email"
+                            class="w-full bg-gray-100 rounded-md border border-transparent focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B] px-3 py-2 text-sm placeholder-gray-400"
+                            id="emailAddress" name="emailAddress" placeholder="example@mail.com" required
+                            type="email" />
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <input checked=""
+                            class="w-4 h-4 text-[#F59E0B] bg-gray-100 border border-gray-300 rounded focus:ring-[#F59E0B] focus:ring-2"
+                            id="saveInfo" name="saveInfo" type="checkbox" />
+                        <label class="text-xs font-normal select-none" for="saveInfo">
+                            Save this information for faster check-out next time
+                        </label>
+                    </div>
+                </form>
+                <!-- Right summary -->
+                <section class="w-full md:w-2/5 mt-10 md:mt-0 relative">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img alt="Small black blender icon" class="w-6 h-6" height="24"
+                            src="https://storage.googleapis.com/a1aa/image/fd586e86-d016-4d9b-c4cf-ca1049213107.jpg"
+                            width="24" />
+                        <span class="text-xs">
+                            Blender
+                        </span>
+                        <span class="ml-auto text-xs">
+                            Rp 20,000
+                        </span>
+                    </div>
+                    <div class="flex justify-between text-xs mb-2">
+                        <span>
+                            Subtotal:
+                        </span>
+                        <span>
+                            Rp 20,000
+                        </span>
+                    </div>
+                    <hr class="border-gray-300 mb-2" />
+                    <div class="flex justify-between text-xs mb-2">
+                        <span>
+                            Shipping:
+                        </span>
+                        <span>
+                            Free
+                        </span>
+                    </div>
+                    <hr class="border-gray-300 mb-4" />
+                    <div class="flex justify-between text-xs font-semibold mb-6">
+                        <span>
+                            Total:
+                        </span>
+                        <span>
+                            Rp 20,000
+                        </span>
+                    </div>
+                    <form class="space-y-4 text-xs" id="paymentForm" novalidate>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input
+                                class="w-4 h-4 border border-gray-400 rounded-full checked:bg-[#F59E0B] checked:border-[#F59E0B] focus:ring-[#F59E0B]"
+                                id="bankRadio" name="payment" type="radio" value="bank" />
+                            <span>
+                                Bank
+                            </span>
+                            <img alt="Bank logo" class="ml-2" height="16"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCHob6WFvwzGY7b6_z_cEcVFHrFdOqI6Ie8w&s"
+                                width="40" />
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input checked=""
+                                class="w-4 h-4 border border-gray-400 rounded-full checked:bg-[#F59E0B] checked:border-[#F59E0B] focus:ring-[#F59E0B]"
+                                id="codRadio" name="payment" type="radio" value="cod" />
+                            <span>
+                                Cash on delivery
+                            </span>
+                        </label>
+                        <button
+                            class="mt-4 bg-[#F59E0B] text-white text-xs font-semibold rounded-md px-6 py-2 hover:bg-[#d7860a] transition w-full"
+                            id="placeOrderBtn" type="button">
+                            Place Order
+                        </button>
+                    </form>
+                    <!-- Overlay container -->
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-6 rounded-md hidden"
+                        id="overlay">
+                        <div class="bg-white rounded-md p-6 max-w-sm w-full text-center relative">
+                            <button aria-label="Close overlay"
+                                class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+                                id="closeOverlayBtn" type="button">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </button>
+                            <div id="overlayContent">
+                                <!-- Dynamic content inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        // Load navbar
+        fetch('navbar_login.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+
+        // Load footer
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script>
+        const bankRadio = document.getElementById('bankRadio');
+        const codRadio = document.getElementById('codRadio');
+        const overlay = document.getElementById('overlay');
+        const overlayContent = document.getElementById('overlayContent');
+        const closeOverlayBtn = document.getElementById('closeOverlayBtn');
+        const placeOrderBtn = document.getElementById('placeOrderBtn');
+        const billingForm = document.getElementById('billingForm');
+
+        function showOverlay(contentHtml) {
+            overlayContent.innerHTML = contentHtml;
+            overlay.classList.remove('hidden');
+        }
+
+        function hideOverlay() {
+            overlay.classList.add('hidden');
+            overlayContent.innerHTML = '';
+        }
+
+        function validateBillingForm() {
+            if (!billingForm.checkValidity()) {
+                billingForm.reportValidity();
+                return false;
+            }
+            const phoneInput = billingForm.querySelector('#phoneNumber');
+            const phonePattern = /^\+?[0-9\s\-]{7,15}$/;
+            if (!phonePattern.test(phoneInput.value.trim())) {
+                alert('Please enter a valid phone number (7-15 digits, optional +, spaces or dashes).');
+                phoneInput.focus();
+                return false;
+            }
+            return true;
+        }
+
+        placeOrderBtn.addEventListener('click', () => {
+            if (!validateBillingForm()) {
+                return;
+            }
+
+            if (bankRadio.checked) {
+                showOverlay(`
+          <h2 class="text-lg font-semibold mb-4">Enter Bank Details</h2>
+          <form id="bankDetailsForm" class="space-y-4 text-left">
+            <div>
+              <label for="accountName" class="block text-sm font-medium text-gray-700">Account Name</label>
+              <input type="text" id="accountName" name="accountName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F59E0B] focus:ring focus:ring-[#F59E0B] focus:ring-opacity-50" required />
+            </div>
+            <div>
+              <label for="accountNumber" class="block text-sm font-medium text-gray-700">Account Number</label>
+              <input type="text" id="accountNumber" name="accountNumber" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F59E0B] focus:ring focus:ring-[#F59E0B] focus:ring-opacity-50" required />
+            </div>
+            <div>
+              <label for="bankName" class="block text-sm font-medium text-gray-700">Bank Name</label>
+              <input type="text" id="bankName" name="bankName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#F59E0B] focus:ring focus:ring-[#F59E0B] focus:ring-opacity-50" required />
+            </div>
+            <div class="flex justify-end space-x-3 pt-2">
+              <button type="button" id="cancelBankDetails" class="px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100">Cancel</button>
+              <button type="submit" class="px-4 py-2 rounded-md bg-[#F59E0B] text-white hover:bg-[#d7860a] font-semibold">Submit</button>
+            </div>
+          </form>
+        `);
+
+                const bankDetailsForm = document.getElementById('bankDetailsForm');
+                const cancelBankDetails = document.getElementById('cancelBankDetails');
+
+                cancelBankDetails.addEventListener('click', () => {
+                    hideOverlay();
+                });
+
+                bankDetailsForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    if (!bankDetailsForm.checkValidity()) {
+                        bankDetailsForm.reportValidity();
+                        return;
+                    }
+                    // Show payment details overlay after submit
+                    const accountName = bankDetailsForm.accountName.value.trim();
+                    const accountNumber = bankDetailsForm.accountNumber.value.trim();
+                    const bankName = bankDetailsForm.bankName.value.trim();
+
+                    showOverlay(`
+            <h2 class="text-lg font-semibold mb-4">Payment Details Submitted</h2>
+            <p class="text-sm mb-2">Thank you for your payment details. Here is what you submitted:</p>
+            <ul class="text-left text-sm space-y-1">
+              <li><strong>Account Name:</strong> ${accountName}</li>
+              <li><strong>Account Number:</strong> ${accountNumber}</li>
+              <li><strong>Bank Name:</strong> ${bankName}</li>
+            </ul>
+            <div class="mt-6">
+              <button id="closePaymentDetails" class="px-4 py-2 rounded-md bg-[#F59E0B] text-white hover:bg-[#d7860a] font-semibold">Close</button>
+            </div>
+          `);
+
+                    const closePaymentDetails = document.getElementById('closePaymentDetails');
+                    closePaymentDetails.addEventListener('click', () => {
+                        hideOverlay();
+                    });
+                });
+            } else if (codRadio.checked) {
+                showOverlay(`
+          <h2 class="text-lg font-semibold mb-4">Order in Process</h2>
+          <p class="text-sm">Your order is being processed and will be delivered soon.</p>
+          <div class="mt-6">
+            <button id="closeProcessOverlay" class="px-4 py-2 rounded-md bg-[#F59E0B] text-white hover:bg-[#d7860a] font-semibold">Close</button>
+          </div>
+        `);
+
+                const closeProcessOverlay = document.getElementById('closeProcessOverlay');
+                closeProcessOverlay.addEventListener('click', () => {
+                    hideOverlay();
+                });
+            } else {
+                alert('Please select a payment method.');
+            }
+        });
+
+        closeOverlayBtn.addEventListener('click', () => {
+            hideOverlay();
+        });
+    </script>
+</body>
+
+</html>
